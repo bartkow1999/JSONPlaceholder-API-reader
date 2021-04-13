@@ -16,7 +16,6 @@
 
 package com.example.recyclersample
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -29,6 +28,11 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var usersList: ArrayList<User>
 
+    private lateinit var tasks_counter: ArrayList<Int>
+    private lateinit var non_completed_counter: ArrayList<Int>
+
+    private lateinit var posts_counter: ArrayList<Int>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -39,20 +43,56 @@ class MainActivity : AppCompatActivity() {
                 val url = "https://jsonplaceholder.typicode.com/users"
                 val body = URL(url).readText()
                 usersList = ArrayList(Klaxon().parseArray<User>(body))
+
+                val url_tasks = "https://jsonplaceholder.typicode.com/todos"
+                val body_tasks = URL(url_tasks).readText()
+                val tasksList = ArrayList(Klaxon().parseArray<Task>(body_tasks))
+
+                tasks_counter = ArrayList<Int>()
+                non_completed_counter = ArrayList<Int>()
+                for (i in 0..9) {
+                    tasks_counter.add(0)
+                    non_completed_counter.add(0)
+                }
+                for (task: Task in tasksList) {
+                    if (!task.completed) {
+                        non_completed_counter[task.userId - 1]++
+                    }
+                    tasks_counter[task.userId - 1]++
+                }
+
+                val url_posts = "https://jsonplaceholder.typicode.com/posts"
+                val body_posts = URL(url_posts).readText()
+                val postsList = ArrayList(Klaxon().parseArray<Post>(body_posts))
+
+                posts_counter = ArrayList<Int>()
+                for (i in 0..9) {
+                    posts_counter.add(0)
+                }
+                for (post: Post in postsList) {
+                    posts_counter[post.userId - 1]++
+                }
+
             }
             runOnUiThread() {
                 val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
-                recyclerView.adapter = UserAdapter(usersList, this::onItemClickHandler)
+                recyclerView.adapter = UserAdapter(
+                    usersList,
+                    tasks_counter,
+                    non_completed_counter,
+                    posts_counter,
+                    this::onItemClickHandler
+                )
             }
         }
         threadGetUsers.start()
     }
 
-    private fun onItemClickHandler(position:Int){
-        Log.d("***","$position");
+    private fun onItemClickHandler(position: Int) {
+        Log.d("***", "$position");
 
         val intent = Intent(this, TaskPostActivity()::class.java)
-        intent.putExtra("rodzic_id", (position+1).toString())
+        intent.putExtra("rodzic_id", (position + 1).toString())
         startActivity(intent)
     }
 

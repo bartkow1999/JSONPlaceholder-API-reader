@@ -30,42 +30,56 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="ID:"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/idUserTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="NAME:"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/nameUserTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="E-MAIL:"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/emailUserTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/wykonanoUserTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wykonano x/y zadań"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/postyUserTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Użytkownik stworzył x postów"
+            android:textSize="16sp" />
 
     </LinearLayout>
 

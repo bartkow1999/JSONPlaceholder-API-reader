@@ -1,8 +1,10 @@
 package com.example.recyclersample
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 import com.beust.klaxon.Klaxon
 import java.net.URL
@@ -60,6 +62,12 @@ class TaskPostActivity : AppCompatActivity() {
             }
         }
         threadGetPosts.start()
+
+        val backButton: Button = findViewById(R.id.backPostButton)
+        backButton.setOnClickListener() {
+            this.finish()
+        }
+
     }
 
     private fun onTaskItemClickHandler(position:Int){
@@ -69,6 +77,9 @@ class TaskPostActivity : AppCompatActivity() {
 
     private fun onPostItemClickHandler(position:Int){
         Log.d("in post ***","${position}");
-        //here you can start a new intent to open a new activity on click of item
+
+        val intent = Intent(this, CommentActivity()::class.java)
+        intent.putExtra("post_id", (postsList[0].id+position).toString())
+        startActivity(intent)
     }
 }

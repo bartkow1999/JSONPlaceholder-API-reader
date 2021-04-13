@@ -16,17 +16,52 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TASKS LIST:"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/taskRecyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
-                app:layoutManager="LinearLayoutManager" />
+                android:layout_height="205dp"
+                app:layoutManager="LinearLayoutManager" >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="POSTS LIST:"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/postRecyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="240dp"
                 app:layoutManager="LinearLayoutManager" />
+
+            <Button
+                android:id="@+id/backPostButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="BACK" />
 
         </LinearLayout>
 

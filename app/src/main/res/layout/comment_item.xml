@@ -26,6 +26,20 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="POST ID:"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/postIdCommentTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="16sp" />
+
+        <TextView
             android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,21 +47,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/idPostTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="USER ID:"
-            android:textSize="12sp" />
-
-        <TextView
-            android:id="@+id/userIdPostTextView"
+            android:id="@+id/idCommentTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView"
@@ -57,11 +57,11 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TITLE:"
+            android:text="NAME:"
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/titlePostTextView"
+            android:id="@+id/nameCommentTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView"
@@ -71,11 +71,25 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="E-MAIL:"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/emailCommentTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="BODY:"
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/bodyPostTextView"
+            android:id="@+id/bodyCommentTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView"
