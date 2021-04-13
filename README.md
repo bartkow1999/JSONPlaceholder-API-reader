@@ -16,7 +16,7 @@ The project was made in **April 2021**.
 * Kotlin
 * Klaxon (JSON parser)
 * Android API 29
-* AndroidStudio
+* Android Studio
 
 ## Setup
 Clone this repository using git bash:
