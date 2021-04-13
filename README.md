@@ -1,6 +1,31 @@
 # JSONPlaceholderCrawler
-Get JSON from JSONPlaceholder API
+This application fetches data from JSONPlaceholder API.
 
-Project is not finished. 
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Screenshots](#examples)
 
-It will be done on 13.04.2021r
+## General info
+This application uses URL class to collect data from API. 
+JSON objects are presented using RecyclerViews.
+The project was made in **April 2021**.
+
+## Technologies
+Kotlin
+Klaxon (JSON parser)
+Android API 29
+AndroidStudio
+
+## Setup
+Clone this repository using git bash:
+```
+https://github.com/bartosztkowalski/JSONPlaceholderCrawler.git
+```
+It`s preferred to open in Android Studio. It shall be opened using **API 29** or newer.
+
+## Screenshots
+![Main menu](./screenshots/00.png)
+![Second activity](./screenshots/01.png)
+![Third activity](./screenshots/02.png)
