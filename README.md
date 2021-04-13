@@ -1,5 +1,5 @@
 # JSONPlaceholderCrawler
-This application fetches data from JSONPlaceholder API.
+This application fetches users, posts and comments from JSONPlaceholder API.
 
 ## Table of contents
 * [General info](#general-info)
@@ -13,10 +13,10 @@ JSON objects are presented using RecyclerViews.
 The project was made in **April 2021**.
 
 ## Technologies
-Kotlin
-Klaxon (JSON parser)
-Android API 29
-AndroidStudio
+*Kotlin
+*Klaxon (JSON parser)
+*Android API 29
+*AndroidStudio
 
 ## Setup
 Clone this repository using git bash:
