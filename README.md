@@ -13,10 +13,10 @@ JSON objects are presented using RecyclerViews.
 The project was made in **April 2021**.
 
 ## Technologies
-*Kotlin
-*Klaxon (JSON parser)
-*Android API 29
-*AndroidStudio
+* Kotlin
+* Klaxon (JSON parser)
+* Android API 29
+* AndroidStudio
 
 ## Setup
 Clone this repository using git bash:
